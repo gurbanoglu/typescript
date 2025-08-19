@@ -1,0 +1,65 @@
+The notes and source code in this folder are from the
+subsequent:
+https://www.typescriptlang.org/docs/handbook/intro.html
+
+Download the latest official TypeScript compiler:
+npm install -g typescript
+
+Compile the program:
+tsc type-safety.ts
+tsc --target es2015 type-safety.ts
+
+Compiling this TypeScript program will
+generate a JavaScript file with the same
+name.
+
+Run the JavaScript file from the compilation:
+node type-safety.ts
+
+TypeScript has the ability to rewrite code from
+newer versions of ECMAScript to older ones.
+This process of moving from a newer or “higher”
+version of ECMAScript down to an older or “lower”
+one is sometimes called downleveling.
+
+By default TypeScript targets ES5, an extremely old
+version of ECMAScript. ECMAScript 2015 can be used
+instead.
+
+Running with --target es2015 changes TypeScript to
+target ECMAScript 2015, meaning code should be able
+to run wherever ECMAScript 2015 is supported:
+tsc --target es2015 type-safety.ts
+
+TypeScript has several type-checking strictness flags
+that can be turned on or off. The strict flag in the CLI,
+or "strict": true in a tsconfig.json toggles them all on
+simultaneously, but we can opt out of them individually.
+The two biggest ones you should know about are
+noImplicitAny and strictNullChecks.
+
+noImplicitAny
+TypeScript sometimes defaults to the any type when it can’t
+infer a type. While this behaves like plain JavaScript,
+using any weakens type safety and defeats the purpose of
+TypeScript. To avoid this, you can enable the noImplicitAny
+compiler option, which forces you to explicitly type anything
+that would otherwise be any, helping catch more bugs and
+improving code reliability.
+
+strictNullChecks
+By default, values like null and undefined are assignable
+to any other type. This can make writing some code easier,
+but forgetting to handle null and undefined is the cause
+of countless bugs. The strictNullChecks flag makes handling
+null and undefined more explicit, and spares us from
+worrying about whether we forgot to handle null and
+undefined.
+
+strictNullChecks: false
+let name: string = null;      // ✅ Allowed!
+name.length;                  // 😱 Runtime crash
+
+strictNullChecks: true
+// ❌ Error: Type 'null' is not assignable to type 'string'
+let name: string = null;

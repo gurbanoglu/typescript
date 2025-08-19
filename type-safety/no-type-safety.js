@@ -9,7 +9,7 @@ function greet(user) {
 /* Runtime error:
    TypeError: Cannot read properties of undefined
    (reading 'toUpperCase') */
-// greet({});
+greet({});
 
 // Correct usage:
 greet({ name: "Alice" });

@@ -1,0 +1,111 @@
+Question 1
+Are TypeScript and JavaScript both compiled
+programming languages and statically typed?
+
+TypeScript and JavaScript are both compiled programming
+languages. Meaning that programs written with them are
+first compiled to machine code, and then that machine
+code is executed.
+
+TypeScript is statically typed meaning that the data
+types of variables are known and checked at compile
+time which is before the code runs.
+
+JavaScript is dynamically typed because the data types
+of its variables are determined at runtime and you can
+assign a value of a different type to the same variable
+within the same program.
+
+Question 2
+For one of the Bank's enterprise projects, the tech
+lead has asked you to secure/optimise the JavaScript
+files by hiding the actual names of variables and
+functions, making it tough to reverse engineer the
+functions and reducing code size. Which of the following
+approaches would you choose?
+
+a. Code Obfuscation and Encryption
+
+b. Code Obfuscation and Minification
+
+c. Code encryption
+
+d. Code minification
+
+Answer:
+b. Code Obfuscation and Minification
+
+Here's why:
+Minification reduces code size by removing whitespace,
+comments, and shortening variable names — improving
+performance and load times.
+
+Obfuscation transforms code to make it harder to
+understand (e.g., renaming variables/functions to
+meaningless names, altering code structure) —
+increasing security by deterring reverse engineering.
+
+Question 2
+What is true about throttling and debouncing in JavaScript?
+
+1. Debouncing delays the function invocation by a specific
+   period of time to avoid unnecessary invocations which
+   may impact the performance of the application.
+2. Throttling performs function invocation at specific
+   intervals as long as the event trigger is active.
+
+JavaScript only truly provides dynamic typing - running the code to see what happens.
+
+Why is TypeScript considered statically typed whereas
+JavaScript is considered dynamically typed?
+TypeScript is statically typed because the data types
+in a TypeScript program are determined at compile time.
+
+The data type of a variable can change during runtime
+if that variable is of type any.
+
+JavaScript is dynamically typed because the data types
+are determined at runtime. The data type of a variable
+can change throughout the runtime of the program.
+
+Why is TypeScript preferred over JavaScript?
+TypeScript is preferred because it makes code more robust
+and reliable by catching errors early, at compile time
+rather than waiting for runtime.
+
+TypeScript performs static type checking, which means it
+analyzes your code as you write it and finds type-related
+bugs before the program even runs.
+
+Using closures makes JavaScript consume more what?
+
+JavaScript is a pass by reference language.
+
+What does an async functon return?
+
+When are two Arrays considerend equal in JavaScript?
+
+When does a stack overflow occur?
+
+In the Event Loop, the function we pass to
+Promise.then() will be pushed to what?
+
+What happens in each Event Loop tick?
+
+
+In which order will the following messages be displayed?
+
+Question 3:
+Can you explain what noEmitOnError is and its purpose?
+noEmitOnError is a TypeScript compiler option that is set
+to false by default.
+
+When set to true, it prevents the compiler from emitting
+JavaScript output files if any errors are reported during
+the compilation of a TypeScript program.
+
+This guards against accidentally running or deploying
+JavaScript files generated from TypeScript code that
+has compile-time errors.
+
+tsc --noEmitOnError basicTypes.ts
